@@ -2,20 +2,17 @@
 
 using namespace std;
 
-void firstFunction()
-{
+void firstFunction() {
 	cout << "First line " << endl;
 }
-void secondFunction()
-{
+
+void secondFunction() {
 	cout << "Second line" << endl;
 }
 
 int main(int argc, char** argv) 
 {
-	firstFunction();
-	firstFunction();
-	secondFunction();
-	secondFunction();
+	firstFunction(); firstFunction();
+	secondFunction(); secondFunction();
 	return 0;
 }
