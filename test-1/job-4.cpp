@@ -11,9 +11,9 @@ int main(int argc, char** argv)
 	setlocale(LC_ALL,"Russian");
 
 	float temp;
-	cout << "Ââåäèòå òåìïåðàòóðó ãðàäóñîâ Öåëüñèÿ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÑÐ¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñƒ Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð² Ð¦ÐµÐ»ÑŒÑÐ¸Ñ" << endl;
 	cin >> temp;
-	cout << temp << " ãðàäóñîâ Öåëüñèÿ ðàâíÿåòñÿ " << transferFahr(temp) << " ãðàäóñîâ Ôàðåíãåéòà" << endl;
+	cout << temp << " Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð² Ð¦ÐµÐ»ÑŒÑÐ¸Ñ Ñ€Ð°Ð²Ð½ÑÐµÑ‚ÑÑ " << transferFahr(temp) << " Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð² Ð¤Ð°Ñ€ÐµÐ½Ð³ÐµÐ¹Ñ‚Ð°" << endl;
 
 	return 0;
 }
