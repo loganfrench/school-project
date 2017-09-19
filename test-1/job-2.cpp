@@ -6,8 +6,8 @@ int main(int argc, char** argv)
 {
 	setlocale(LC_ALL,"Russian");
 	int far;
-	cout << "Ââåäèòå ðàññòîÿíèå â ôàðëîãíàõ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð² Ñ„Ð°Ñ€Ð»Ð¾Ð³Ð½Ð°Ñ…" << endl;
 	cin >> far;
-	cout << far << " ôàðëîíãîâ - " << far*220 << "ÿðä" << endl;
+	cout << far << " Ñ„Ð°Ñ€Ð»Ð¾Ð½Ð³Ð¾Ð² - " << far*220 << "ÑÑ€Ð´" << endl;
 	return 0;
 }
