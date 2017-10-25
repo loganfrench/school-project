@@ -8,8 +8,8 @@ int main()
 {
 	setlocale(LC_ALL,"Russian");
 	int growth;
-	cout << "Ââåäèòå ðîñò: ___\b\b\b";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð¾ÑÑ‚: ___\b\b\b";
 	cin >> growth;
-	cout << "Âàø ðîñò: " << growth / ft << " ôóò(îâ) è " << (growth % ft) << " äþéì(îâ)" << endl;
+	cout << "Ð’Ð°Ñˆ Ñ€Ð¾ÑÑ‚: " << growth / ft << " Ñ„ÑƒÑ‚(Ð¾Ð²) Ð¸ " << (growth % ft) << " Ð´ÑŽÐ¹Ð¼(Ð¾Ð²)" << endl;
 	return 0;
 }
