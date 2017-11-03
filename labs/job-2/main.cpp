@@ -12,8 +12,8 @@ int main ()
 	srand(time(NULL));
 	setlocale(LC_ALL, "Russian");
 	int num[SIZE];
-	double sumPlus = 1; // полож
-	double sumMinus = 0; // отриц
+	double sumPlus = 1; // РїРѕР»РѕР¶
+	double sumMinus = 0; // РѕС‚СЂРёС†
 	int j = 0;
 	int m[SIZE];
  
@@ -26,7 +26,7 @@ int main ()
 	for(int i = 0; i < SIZE; i++) {
 		if(num[i] < 0) sumMinus += num[i];
  	}
-	cout << "сумма отрицательных = " << sumMinus << endl;	
+	cout << "СЃСѓРјРјР° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… = " << sumMinus << endl;	
 	
 	int min = 0, max = 0;
 	
@@ -41,6 +41,6 @@ int main ()
 		sumPlus *= num[i];
 	}
 		
-	cout << " произведение между max и min = " << sumPlus << endl;
+	cout << " РїСЂРѕРёР·РІРµРґРµРЅРёРµ РјРµР¶РґСѓ max Рё min = " << sumPlus << endl;
 	return 0;
 }
