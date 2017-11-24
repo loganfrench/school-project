@@ -11,7 +11,7 @@ int main()
         for(double x = xn; x <= xk; x += dx) {
             double f;
             if(x < 0 && b != 0) f = a*pow(x,2)+b;
-            else if(x > 0 && b == 0) f = x-a/x-c;
+            else if(x > 0 && b == 0) f = (x-a)/(x-c);
             else f = x/c;
             cout << "x = " << x << "\tf = " << f << endl;
         }  
@@ -20,7 +20,7 @@ int main()
         for(double x = xn; x <= xk; x += dx) {
             int f;
             if(x < 0 && b != 0) f = a*pow(x,2)+b;
-            else if(x > 0 && b == 0) f = x-a/x-c;
+            else if(x > 0 && b == 0) f = (x-a)/(x-c);
             else f = x/c;
             cout << "x = " << x << "\tf = " << f << endl;
         }
