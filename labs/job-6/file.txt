@@ -1,0 +1,6 @@
+scan[0].model = 1
+scan[0].price = 1
+scan[0].x_size = 1,000000
+scan[0].y_size = 1,000000
+scan[0].optr = 1
+scan[0].grey = 1
