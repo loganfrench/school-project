@@ -66,6 +66,9 @@ int main()
 			cout << "Максимально число встречающееся в массиве больше одного раза: " << maxNumbers[i] << endl; 
 			break; 
 		} 
-	} 
+	}
+	delete [] maxNumbers;
+	for(int i = 0; i < n; i++) delete [] matr[i];
+	delete [] matr;
 	return 0;
 } 
