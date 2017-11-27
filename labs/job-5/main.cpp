@@ -17,11 +17,11 @@ int main()
 	int goodStud = 0;
 	
 	for (int i = 0; i < SIZE; i++){
-		cout << "Ââåäèòå ôàìèëèş ñòóäåíòà: ";
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ„Ğ°Ğ¼Ğ¸Ğ»Ğ¸Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: ";
 		cin >> stud[i].family;
-		cout << "Ââåäèòå íîìåğ ãğóïïû: ";
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ³Ñ€ÑƒĞ¿Ğ¿Ñ‹: ";
 		cin >> stud[i].group;
-		cout << "Ââåäèòå 5 îöåíîê: " << endl;
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 5 Ğ¾Ñ†ĞµĞ½Ğ¾Ğº: " << endl;
 		for (int j = 0; j < 5; j++) cin >> stud[i].rat[j];
 		cout << endl;
 	}
@@ -34,15 +34,15 @@ int main()
 		double score = sum / 5;
 		
 		if(score > 4.0) {
-			cout << "Ôàìèëèÿ ñòóäåíòà: " << stud[i].family << endl;
-			cout << "Ãğóïïà: " << stud[i].group << endl;
-			cout << "Áàëë: " << score << endl;
+			cout << "Ğ¤Ğ°Ğ¼Ğ¸Ğ»Ğ¸Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << stud[i].family << endl;
+			cout << "Ğ“Ñ€ÑƒĞ¿Ğ¿Ğ°: " << stud[i].group << endl;
+			cout << "Ğ‘Ğ°Ğ»Ğ»: " << score << endl;
 			goodStud++;
 			cout << endl;
 		}
 		sum = 0;
 	}
-	if(!goodStud) cout << "Íåò ñòóäåíòîâ ñî ñğåäíèì áàëëîì áîëüøå 4.0" << endl;
+	if(!goodStud) cout << "ĞĞµÑ‚ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ¾Ğ² ÑĞ¾ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¼ Ğ±Ğ°Ğ»Ğ»Ğ¾Ğ¼ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 4.0" << endl;
 	
 	return 0;
 }
