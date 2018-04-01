@@ -1,61 +1,54 @@
 #include <iostream>
-#define arraySize(arr)  (sizeof arr / sizeof arr[0])
 
 using namespace std;
 
 class Students {
 private:
-	string student[123]; // 0 - name; 1 - rating
-	int studentRating[123][123];
-	int count;
+	string student;
+	float averageBall;
 public:
-	Students(string name) {
-		this->count = 0;
+	Students() {
+		this->student = "Ahmed";
+		this->averageBall = 4.4;
 	}
-	int setStudent(string name) {
-		this->student[count++] = name;
-		return count - 1;
+	
+	Students(string name, float ball) {
+		this->student = name;
+		this->averageBall = ball;
 	}
-	void setRating(int id, int rating[]) {
-		for(int i = 0; i < 5; i++) {	
-			this->studentRating[id][i] = rating[i];
-		}
+	
+	Students(Students &s) {
+		this->student = s.student;
+		this->averageBall = s.averageBall;
 	}
-	float getBall(int id) {
-		float ball = 0, countRating = 0;
-		for(int i = 0; i < sizeof(this->studentRating); i++) {
-			if(i == id) {
-				countRating = 5;
-				for(int j = 0; j < countRating; j++) {
-					ball += this->studentRating[i][j];
-				}
-				break;
-			}
-		}
-		return ball/countRating;
+	
+	float getBall() {
+		return this->averageBall;
 	}
-	void print() {
-		for(int i = 0; i < this->count; i++) {
-			cout << (i+1) << ". " << student[i] << ". Ball: " << getBall(i) << endl;
-		}
+	
+	void printBall() {
+		cout << this->averageBall << endl;
 	}
 	
 	~Students() {
 		cout << "clean memory" << endl;
 	};
-	
-	friend void setRating(int, int);
+	friend void setStudent(Students &, string, float);
 };
 
+void setStudent(Students &s, string name, float ball) {
+	s.student = name;
+	s.averageBall = ball;
+}
+
 int main() {
-	Students w("aasd");
+	Students Ahmed;
+	Students Arsen("Arsen", 4);
+	Students Ashot(Ahmed);
 
-	int id = w.setStudent("Petya");
-	int rating[] = {5, 5, 5, 5, 5};
-	w.setRating(id, rating);
-
-	w.print();
-
+	Ahmed.printBall();
+	Arsen.printBall();
+	Ashot.printBall();
 		
 	return 0;
 }
