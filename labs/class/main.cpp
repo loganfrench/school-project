@@ -27,11 +27,11 @@ public:
 	}
 	
 	void operator+(string lastName) {
-        student += lastName;
-    }
-    
-    void printFullName() {
-    	cout << student << " " << lastName << endl;
+		student += lastName;
+	}
+
+	void printFullName() {
+		cout << student << " " << lastName << endl;
 	}
 	
 	float getBall() {
