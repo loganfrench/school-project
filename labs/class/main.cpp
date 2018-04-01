@@ -4,7 +4,7 @@ using namespace std;
 
 class Students {
 private:
-	string student;
+	string student, lastName;
 	float averageBall;
 public:
 	Students() {
@@ -20,6 +20,18 @@ public:
 	Students(Students &s) {
 		this->student = s.student;
 		this->averageBall = s.averageBall;
+	}
+	
+	void setLastName(string name) {
+		this->lastName = name;
+	}
+	
+	void operator+(string lastName) {
+        student += lastName;
+    }
+    
+    void printFullName() {
+    	cout << student << " " << lastName << endl;
 	}
 	
 	float getBall() {
@@ -43,6 +55,10 @@ void setStudent(Students &s, string name, float ball) {
 
 int main() {
 	Students Ahmed;
+
+	Ahmed.setLastName("Maga");
+	Ahmed.printFullName();
+
 	Students Arsen("Arsen", 4);
 	Students Ashot(Ahmed);
 
