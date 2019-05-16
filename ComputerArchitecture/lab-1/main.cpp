@@ -8,20 +8,22 @@ struct Node {
 	Node* next;
 };
 
-class Queue {
+class List {
 	Node *first, *last;
 public:
-	Queue()
+	List()
 		: first(NULL)
 		, last(NULL){};
-	~Queue();
+	~List();
 
 	void push(int value);
-	void remove();
+	void remove(int elem);
+	int search(int elem);
+	int size();
 	void print();
 };
 
-Queue::~Queue() {
+List::~List() {
 	Node* temp = first;
 
 	while (temp != NULL) {
@@ -32,7 +34,7 @@ Queue::~Queue() {
 	}
 }
 
-void Queue::push(int value) {
+void List::push(int value) {
 	Node* temp = new Node;
 	temp->value = value;
 	temp->next = NULL;
@@ -45,7 +47,7 @@ void Queue::push(int value) {
 		first = last = temp;
 }
 
-void Queue::print() {
+void List::print() {
 	Node* temp = first;
 
 	cout << "[ ";
@@ -56,37 +58,77 @@ void Queue::print() {
 	cout << "]" << endl;
 }
 
-void Queue::remove() {
-	if (first != NULL) {
-		Node* temp = first;
+void List::remove(int elem) {
+	if ((first != NULL) && (elem < size()) && (elem >= 0)) {
+		Node *temp = first, *h = first;
 
-		cout << "ELEMENT '" << first->value << "' REMOVE" << endl;
-		first = first->next;
+		for (int i = 0; i < elem; i++) {
+			h = temp;
+			temp = temp->next;
+		}
+
+		if (temp == first) 
+			first = temp->next;
+		else
+			h->next = temp->next;
+
+		cout << "ELEMENT '" << temp->value << "' REMOVE"<< endl;
 
 		delete temp;
 	}
 }
 
+int List::search(int elem) {
+	Node *temp = first;
+
+	for (int i = 0; i < elem; i++) {
+		temp = temp->next;
+	}
+
+	return temp->value;
+}
+
+int List::size() {
+	int size = 0;
+
+	Node* temp = first;
+
+	while (temp != NULL) {
+		temp = temp->next;
+		size++;
+	}
+
+	return size;
+}
 
 void main() {
-	Queue q;
+	List l;
 
-	q.push(10);
-	q.push(20);
-	q.push(30);
+	l.push(10);
+	l.push(20);
+	l.push(30);
 
-	q.print();
+	l.print();
 
-	q.remove();
+	cout << "SIZE: " << l.size() << endl;
 
-	q.print();
+	l.remove(1);
+
+	cout << "SIZE: " << l.size() << endl;
+
+	l.print();
+
+	cout << "LIST[1]: " << l.search(1) << endl;
 
 	system("pause");
 
 	/*
 	Output: 
 		[ 10 20 30 ]
-		ELEMENT '30' REMOVE
-		[ 20 30 ]
+		SIZE: 3
+		ELEMENT '20' REMOVE
+		SIZE: 2
+		[ 10 30 ]
+		LIST[1]: 30
 	*/
 }
